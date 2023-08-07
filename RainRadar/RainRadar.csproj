@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\germany_data_900kmx900km.txt" />
+    <None Remove="Resources\hamburg_data_53.62120_9.99653_360x128km.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\germany_data_900kmx900km.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\hamburg_data_53.62120_9.99653_360x128km.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mapsui\Mapsui.UI.Wpf\Mapsui.UI.Wpf.csproj" />
+    <ProjectReference Include="..\..\Mapsui\Mapsui\Mapsui.csproj" />
+  </ItemGroup>
+
+</Project>
